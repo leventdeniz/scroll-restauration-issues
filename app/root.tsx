@@ -4,25 +4,45 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useRouteLoaderData,
 } from "@remix-run/react";
-import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
+import { useEffect } from "react";
+import { LoaderFunctionArgs, json } from "@remix-run/node";
+import { scrollRestorationCookie } from "./cookies.server";
 
-export const links: LinksFunction = () => [
-  { rel: "preconnect", href: "https://fonts.googleapis.com" },
-  {
-    rel: "preconnect",
-    href: "https://fonts.gstatic.com",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
-  },
-];
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const cookie =
+    (await scrollRestorationCookie.parse(request.headers.get("Cookie"))) ??
+    "auto";
+  const scrollRestorationParam =
+    new URL(request.url).searchParams.get("scrollRestoration") ?? cookie;
+  const scrollRestoration: typeof history.scrollRestoration =
+    scrollRestorationParam !== "auto" && scrollRestorationParam !== "manual"
+      ? "auto"
+      : scrollRestorationParam;
+  return json(
+    { scrollRestoration },
+    {
+      headers: {
+        "Set-Cookie": await scrollRestorationCookie.serialize(
+          scrollRestoration
+        ),
+      },
+    }
+  );
+};
+
+let scrollRestoration: typeof history.scrollRestoration = "auto";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const data = useRouteLoaderData<typeof loader>("root");
+  useEffect(() => {
+    const value = data?.scrollRestoration ?? scrollRestoration;
+    history.scrollRestoration = value;
+    scrollRestoration = value;
+  }, [data?.scrollRestoration]);
   return (
     <html lang="en">
       <head>
