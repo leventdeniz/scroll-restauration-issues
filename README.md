@@ -2,5 +2,5 @@
 
 ## Links:
 
-* [Manual ScrollRestoration](http://localhost:5173?scrollRestoration=manual)
-* [Auto ScrollRestauration](http://localhost:5173?scrollRestoration=auto)
+* [Manual ScrollRestoration](https://remix-scroll-restoration.vercel.app/?scrollRestoration=manual)
+* [Auto ScrollRestauration](https://remix-scroll-restoration.vercel.app/?scrollRestoration=auto)
