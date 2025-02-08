@@ -19,9 +19,9 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   const scrollRestorationParam =
     new URL(request.url).searchParams.get("scrollRestoration") ?? cookie;
   const scrollRestoration: typeof history.scrollRestoration =
-    scrollRestorationParam !== "auto" && scrollRestorationParam !== "manual"
-      ? "auto"
-      : scrollRestorationParam;
+    scrollRestorationParam === "auto" || scrollRestorationParam === "manual"
+      ? scrollRestorationParam
+      : "auto";
   return json(
     { scrollRestoration },
     {
