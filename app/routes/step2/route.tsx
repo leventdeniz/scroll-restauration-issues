@@ -8,132 +8,14 @@ export const loader = async () => {
 export default function Route() {
   return (
     <main>
-      <ul className="p-2 gap-2 flex flex-col">
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-700 odd:bg-gray-600 rounded block">
-          <Link className="block size-full" viewTransition to="/step3">
-            step3
-          </Link>
-        </li>
+      <ul className="p-2 gap-2 flex flex-col text-white">
+        {Array.from({ length: 20 }).map((_, i) => (
+          <li key={i} className="h-64 bg-gray-600 odd:bg-gray-500 rounded block">
+            <Link className="size-full flex justify-center items-center text-7xl" viewTransition to="/step3">
+              3
+            </Link>
+          </li>
+        ))}
       </ul>
     </main>
   );

@@ -9,131 +9,13 @@ export default function Route() {
   return (
     <main>
       <ul className="p-2 gap-2 flex flex-col">
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
-        <li className="h-64 bg-gray-900 odd:bg-gray-800 rounded block">
-          <Link className="block size-full" viewTransition to="/step1">
-            step1
-          </Link>
-        </li>
+        {Array.from({ length: 12 }).map((_, i) => (
+          <li key={i} className="h-64 bg-gray-800 odd:bg-gray-700 text-white rounded block">
+            <Link className="size-full flex justify-center items-center text-7xl" viewTransition to="/step1">
+              1
+            </Link>
+          </li>
+        ))}
       </ul>
     </main>
   );
